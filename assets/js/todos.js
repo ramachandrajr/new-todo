@@ -16,7 +16,7 @@ $("ul").on("click", "li", function () {
 // Click on X to delete Todos
 $("ul").on("click", "span",function (event) {
 	$(this).parent().fadeOut(500, function () {
-		$when($(this).remove()).then(function () {
+		$.when($(this).remove()).then(function () {
 			// Also add all data to my cookie.
 			putDataInCookie();
 		});
