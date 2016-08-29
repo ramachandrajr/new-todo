@@ -39,8 +39,11 @@ function putDataInCookie() {
 
 	// Put that string in a cookie.	
 	document.cookie = todosAsString;
-	var x = document.cookie;
-	console.log(x);
+}
+
+function getDataFromCookie() {
+	var cookieData = document.cookie;
+	console.log(cookieData);
 }
 
 setInterval(putDataInCookie, 3000);
