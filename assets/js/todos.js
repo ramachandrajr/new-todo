@@ -50,7 +50,7 @@ function getDataFromCookie() {
 	// Divide data into usable list.
 	var todosList = cookieData.split("&");
 	todosList.unshift();
-	console.log()
+	console.log(todosList);
 }
 
 setInterval(putDataInCookie, 3000);
