@@ -29,7 +29,7 @@ $(".fa-pencil-square-o").click(400, function () {
 function putDataInCookie() {
 	// Select all li's.
 	var todoTasks = document.querySelectorAll("li");
-	var todosAsString = "tasks=";
+	var todosAsString = "tasks= ";
 
 	for (var i = 0; i < todoTasks.length; i++) {
 		// Add all the data to string and keep appending.
