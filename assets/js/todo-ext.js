@@ -45,7 +45,9 @@ $(".fa-pencil-square-o").click(400, function () {
 // and keep track of all the inserted data.
 function putDataInCookie() {
 	// Select all li's.
-	var todoTasks = document.querySelectorAll("li");
+	var todoTasks = document.querySelectorAll("ul").split(" ");
+	console.log(todoTasks);
+	/*
 	var todosAsString = "tasks=";
 
 	for (var i = 0; i < todoTasks.length; i++) {
@@ -56,6 +58,7 @@ function putDataInCookie() {
 	// todoAsString is absolutely fine.	
 	// Put that string in a cookie.	
 	document.cookie = todosAsString;
+	*/
 }
 
 function getDataFromCookie() {
@@ -73,7 +76,7 @@ function getDataFromCookie() {
 	}	
 
 	for (var i = 0; i < todosList.length; i++) {
-		$("ul").append("<li><span><i class='fa fa-trash'></i></span> " + todosList[i] + "</li>");
+		$("ul").append(todosList[i]);
 	}
 }
 
