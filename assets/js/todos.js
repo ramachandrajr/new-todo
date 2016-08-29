@@ -29,7 +29,7 @@ $(".fa-pencil-square-o").click(400, function () {
 function putDataInCookie() {
 	// Select all li's.
 	var todoTasks = document.querySelectorAll("li");
-	var todosAsString = "tasks= ";
+	var todosAsString = "tasks=";
 
 	for (var i = 0; i < todoTasks.length; i++) {
 		// Add all the data to string and keep appending.
@@ -45,7 +45,7 @@ function getDataFromCookie() {
 	var cookieData = document.cookie;
 	console.log(cookieData);
 	// Divide data into usable list.
-	console.log(cookieData.split(" & "));
+	console.log(cookieData.split(" &"));
 }
 
 setInterval(putDataInCookie, 3000);
