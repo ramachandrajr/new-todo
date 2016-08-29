@@ -49,7 +49,7 @@ function getDataFromCookie() {
 	console.log(cookieData);
 	// Divide data into usable list.
 	var todosList = cookieData.split("&");
-	todosList.unshift();
+	todosList.shift();
 	console.log(todosList);
 }
 
