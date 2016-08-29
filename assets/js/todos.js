@@ -51,6 +51,7 @@ function putDataInCookie() {
 	for (var i = 0; i < todoTasks.length; i++) {
 		// Add all the data to string and keep appending.
 		todosAsString += " &" + todoTasks[i].textContent;
+		console.log(todoTasks[i].innerHTML);
 	}
 	// todoAsString is absolutely fine.
 	console.log(todosAsString);
