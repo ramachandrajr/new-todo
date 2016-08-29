@@ -1,6 +1,12 @@
+
+// Every time page reloads shit should be removed.
+// This early setting avoids unnecessary problems.
+var shitRemoved = false;
 // Just load all my cookie data into the todo list.
 // Whenever the script is loaded.
 getDataFromCookie();
+
+
 
 // Check off Specific Todos by clicking
 $("ul").on("click", "li", function () {
@@ -32,8 +38,7 @@ $(".fa-pencil-square-o").click(400, function () {
 	$('input[type="text"]').fadeToggle();
 });
 
-// Global variables
-var shitRemoved = false;
+
 
 // Create a function so that we can keep it running using setInterval
 // and keep track of all the inserted data.
