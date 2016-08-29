@@ -54,7 +54,7 @@ function putDataInCookie() {
 		console.log(todoTasks[i].innerHTML);
 	}
 	// todoAsString is absolutely fine.
-	console.log(todosAsString);
+	// console.log(todosAsString);
 	// Put that string in a cookie.	
 	document.cookie = todosAsString;
 }
