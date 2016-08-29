@@ -52,7 +52,7 @@ function putDataInCookie() {
 		todosAsString += " &" + todoTasks[i].textContent;
 	}
 	// todoAsString is absolutely fine.
-	console.log(todoAsString);
+	console.log(todosAsString);
 	// Put that string in a cookie.	
 	document.cookie = todosAsString;
 }
