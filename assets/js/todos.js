@@ -44,10 +44,11 @@ function putDataInCookie() {
 function getDataFromCookie() {
 	var cookieData = document.cookie;
 	console.log(cookieData);
+	// Divide data into usable list.
+	console.log(cookieData.split(" & "));
 }
 
 setInterval(putDataInCookie, 3000);
 setInterval(getDataFromCookie, 3000);
 
-// console.log(todosAsString.split(" & "));
 
