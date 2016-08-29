@@ -57,9 +57,11 @@ function getDataFromCookie() {
 		// Set dirt removed to true, so  that you wont chop off the real data.
 		shitRemoved = true;
 	}	
-	console.log(todosList);
+
+	for (var i = 0; i < todosList.length; i++) {
+		$("ul").append("<li><span><i class='fa fa-trash'></i></span> " + todosList[i] + "</li>");
+	}
 }
 
-setInterval(putDataInCookie, 3000);
 
 
