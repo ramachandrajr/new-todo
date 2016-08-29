@@ -16,21 +16,23 @@ $("ul").on("click", "li", function () {
 // Click on X to delete Todos
 $("ul").on("click", "span",function (event) {
 	$(this).parent().fadeOut(500, function () {
-		$(this).remove();
+		$(this).remove(function () {
+			// Also add all data to my cookie.
+			putDataInCookie();
+		});
 	});
 	event.stopPropagation();
-	// Also add all data to my cookie.
-	putDataInCookie();
 });
 
 // When enter is pressed then 
 $('input[type="text"]').keypress(function (event) {
 	if (event.which === 13) {
 		var todoText = $(this).val();
-		$("ul").append("<li><span><i class='fa fa-trash'></i></span> " + todoText + "</li>");
+		$("ul").append("<li><span><i class='fa fa-trash'></i></span> " + todoText + "</li>", function () {
+			// Also add all data to my cookie.
+			putDataInCookie();
+		});
 		$(this).val("");
-		// Also add all data to my cookie.
-		putDataInCookie();
 	}
 })
 
