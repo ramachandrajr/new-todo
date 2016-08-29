@@ -24,6 +24,9 @@ $(".fa-pencil-square-o").click(400, function () {
 	$('input[type="text"]').fadeToggle();
 });
 
+// Global variables
+var shitRemoved = false;
+
 // Create a function so that we can keep it running using setInterval
 // and keep track of all the inserted data.
 function putDataInCookie() {
@@ -45,11 +48,11 @@ function getDataFromCookie() {
 	var cookieData = document.cookie;
 	console.log(cookieData);
 	// Divide data into usable list.
-	var todosList = (cookieData.split("&")).unshift();
-	console.log(todosList);
+	var todosList = cookieData.split("&");
+	todosList.unshift();
+	console.log()
 }
 
 setInterval(putDataInCookie, 3000);
-setInterval(getDataFromCookie, 3000);
 
 
