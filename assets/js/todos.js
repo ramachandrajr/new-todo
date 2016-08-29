@@ -47,5 +47,7 @@ function getDataFromCookie() {
 }
 
 setInterval(putDataInCookie, 3000);
+setInterval(getDataFromCookie, 3000);
+
 // console.log(todosAsString.split(" & "));
 
