@@ -38,7 +38,7 @@ function putDataInCookie() {
 	// todoAsString is absolutely fine.
 
 	// Put that string in a cookie.	
-	document.cookie = todoAsString;
+	document.cookie = todosAsString;
 	var x = document.cookie;
 	console.log(x);
 }
