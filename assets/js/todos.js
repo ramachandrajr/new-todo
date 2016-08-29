@@ -1,3 +1,7 @@
+// Just load all my cookie data into the todo list.
+// Whenever the script is loaded.
+getDataFromCookie();
+
 // Check off Specific Todos by clicking
 $("ul").on("click", "li", function () {
 	$(this).toggleClass("completed");
@@ -9,6 +13,8 @@ $("ul").on("click", "span",function (event) {
 		$(this).remove();
 	});
 	event.stopPropagation();
+	// Also add all data to my cookie.
+	putDataInCookie();
 });
 
 // When enter is pressed then 
@@ -17,6 +23,8 @@ $('input[type="text"]').keypress(function (event) {
 		var todoText = $(this).val();
 		$("ul").append("<li><span><i class='fa fa-trash'></i></span> " + todoText + "</li>");
 		$(this).val("");
+		// Also add all data to my cookie.
+		putDataInCookie();
 	}
 })
 
