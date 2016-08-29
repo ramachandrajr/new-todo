@@ -24,3 +24,4 @@ $(".fa-pencil-square-o").click(400, function () {
 	$('input[type="text"]').fadeToggle();
 });
 
+var todosList = document.querySelector("ul").innerHTML;
