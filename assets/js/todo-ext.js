@@ -45,7 +45,7 @@ $(".fa-pencil-square-o").click(400, function () {
 // and keep track of all the inserted data.
 function putDataInCookie() {
 	// Select all li's.
-	var todoTasks = document.querySelectorAll("ul").split(" ");
+	var todoTasks = document.querySelectorAll("ul").innerHTML.split(" ");
 	console.log(todoTasks);
 	/*
 	var todosAsString = "tasks=";
