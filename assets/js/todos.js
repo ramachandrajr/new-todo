@@ -45,11 +45,18 @@ function putDataInCookie() {
 }
 
 function getDataFromCookie() {
+	// Get the cookie data.
 	var cookieData = document.cookie;
-	console.log(cookieData);
 	// Divide data into usable list.
 	var todosList = cookieData.split("&");
-	todosList.shift();
+	// Test if the useless data is removed.
+	// If not go on and remove.
+	if (shitRemoved === false) {
+		// Remove the first part of data as it is not useful.
+		todosList.shift();	
+		// Set dirt removed to true, so  that you wont chop off the real data.
+		shitRemoved = true;
+	}	
 	console.log(todosList);
 }
 
